@@ -344,47 +344,56 @@
   // =========================
   // CONTADOR REGRESSIVO
   // =========================
-  function initCountdown() {
-    // lê a data do atributo data-evento, se existir
-    const cont = $('.contador');
-    const dataAttr = cont?.getAttribute('data-evento');
-    const fallback = new Date('September 20, 2025 20:00:00').getTime();
-    const target = dataAttr ? new Date(dataAttr).getTime() : fallback;
+  function initCountdown(){
+  const FALLBACK_ISO = "2025-09-20T19:00:00-03:00";
 
-    const h3 = $('.contador h3');
-    const nums = $('.contador-numeros');
-    const diasEl = $('#dias');
-    const horasEl = $('#horas');
-    const minEl = $('#minutos');
-    const segEl = $('#segundos');
+  // Para CADA contador na página
+  document.querySelectorAll(".contador").forEach((cont) => {
+    const raw = cont.getAttribute("data-evento") || FALLBACK_ISO;
+    const target = new Date(raw).getTime();
 
-    if (!cont || !diasEl || !horasEl || !minEl || !segEl) return;
+    const h3   = cont.querySelector("h3");
+    const box  = cont.querySelector(".contador-numeros");
+
+    // Procura dentro do próprio contador (aceita id antigo ou data-atributo/classe)
+    const dEl  = cont.querySelector('[data-ct="dias"], .ct-dias, #dias');
+    const hEl  = cont.querySelector('[data-ct="horas"], .ct-horas, #horas');
+    const mEl  = cont.querySelector('[data-ct="minutos"], .ct-minutos, #minutos');
+    const sEl  = cont.querySelector('[data-ct="segundos"], .ct-segundos, #segundos');
+
+    if (!dEl || !hEl || !mEl || !sEl) return; // se faltar algo, ignora este bloco
 
     const tick = () => {
       const now = Date.now();
       const dist = target - now;
 
+      if (Number.isNaN(target)) {
+        if (h3) h3.textContent = "Data inválida";
+        return;
+      }
       if (dist <= 0) {
+        if (h3) h3.textContent = "A festa começou!";
+        if (box) box.innerHTML = "";
         clearInterval(timer);
-        if (h3) h3.textContent = 'A festa começou!';
-        if (nums) nums.innerHTML = '';
         return;
       }
 
-      const dias = Math.floor(dist / (1000 * 60 * 60 * 24));
-      const horas = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutos = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const dias     = Math.floor(dist / (1000 * 60 * 60 * 24));
+      const horas    = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos  = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
       const segundos = Math.floor((dist % (1000 * 60)) / 1000);
 
-      diasEl.textContent = String(dias).padStart(2, '0');
-      horasEl.textContent = String(horas).padStart(2, '0');
-      minEl.textContent = String(minutos).padStart(2, '0');
-      segEl.textContent = String(segundos).padStart(2, '0');
+      dEl.textContent = String(dias).padStart(2, "0");
+      hEl.textContent = String(horas).padStart(2, "0");
+      mEl.textContent = String(minutos).padStart(2, "0");
+      sEl.textContent = String(segundos).padStart(2, "0");
     };
 
     tick();
     const timer = setInterval(tick, 1000);
-  }
+  });
+}
+
 
   // =========================
   // BOOT
@@ -435,3 +444,4 @@
   }
   });
 })();
+
