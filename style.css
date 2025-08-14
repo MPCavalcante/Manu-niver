@@ -461,3 +461,9 @@ nav.open .menu-toggle .menu-bars::after{  transform: rotate(-45deg) translate(3p
   nav.open ul{ max-height: 420px; }
 }
 
+#xv-title {
+  text-align: center;
+  color: #6a1b9a;
+  margin: 0 0 12px; /* opcional: ajusta o espaçamento */
+}
+
