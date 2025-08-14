@@ -467,3 +467,45 @@ nav.open .menu-toggle .menu-bars::after{  transform: rotate(-45deg) translate(3p
   margin: 0 0 12px; /* opcional: ajusta o espaçamento */
 }
 
+
+/* Card do QR (miniatura) */
+.qr-card{ text-align:center; margin: 12px auto 0; }
+.qr-card .qr-code{
+  display:inline-block;
+  max-width:320px; width:100%; height:auto;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+
+/* Modal */
+#qr-modal[hidden]{ display:none; }
+.qr-modal{
+  position:fixed; inset:0; z-index:9999;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(0,0,0,.85);
+  /* melhora a legibilidade em iOS/Safari compatíveis */
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+.qr-dialog{
+  position:relative;
+  padding:0; border:0; background:transparent;
+  display:flex; flex-direction:column; gap:12px; align-items:center;
+}
+.qr-full{
+  max-width:min(92vw, 640px);
+  max-height:86vh;
+  width:100%; height:auto;
+  border-radius:12px;
+  box-shadow:0 16px 30px rgba(0,0,0,.35);
+}
+.qr-close{
+  position:absolute; top:-6px; right:-6px;
+  width:44px; height:44px; border:0; border-radius:999px;
+  background:rgba(255,255,255,.2); color:#fff; font-size:28px; cursor:pointer;
+}
+.qr-download{
+  background:#fff; color:#432f5a; text-decoration:none;
+  padding:10px 14px; border-radius:10px; font-weight:700;
+  box-shadow:0 10px 24px rgba(0,0,0,.15);
+}
