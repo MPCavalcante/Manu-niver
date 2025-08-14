@@ -227,20 +227,32 @@
     <p style="margin:16px 0 8px;">Leia o QRCODE abaixo:</p>
 
     <!-- QR Code logo abaixo da mensagem -->
-    <figure class="qr-card" style="text-align:center;margin:8px auto 0;">
-      <!-- Clique abre em tela cheia (facilita escanear no desktop) -->
-      <a href="assets/QRCODE.jpg" target="_blank" rel="noopener">
-        <img
-          src="assets/QRCODE.jpeg"
-          alt="QR Code do PIX"
-          class="qr-code"
-          loading="lazy"
-          decoding="async"
-          style="display:inline-block;max-width:320px;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08);"
-        >
-      </a>
-      
-    </figure>
+    <figure class="qr-card">
+  <img src="assets/QRCODE.jpeg"
+       alt="QR Code do PIX"
+       class="qr-code"
+       width="320" height="320">
+    <figcaption>Toque no QR para ampliar</figcaption>
+
+  <!-- opcional: botão visível para acessibilidade -->
+  <button type="button" class="btn-confirmar qr-open" aria-haspopup="dialog">
+    Ampliar QR
+  </button>
+</figure>
+
+<!-- Modal/Overlay -->
+<div id="qr-modal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" hidden>
+  <div class="qr-dialog" role="document">
+    <button class="qr-close" aria-label="Fechar (Esc)">×</button>
+    <h3 id="qr-title" class="sr-only">QR Code em tamanho grande</h3>
+
+    <img src="assets/QRCODE.jpeg"
+         alt=""
+         class="qr-full">
+
+    <a class="qr-download" href="assets/QRCODE.jpeg" download="PIX-Manu.jpg">Baixar QR</a>
+  </div>
+</div>
 
     <p style="margin-top:16px;">
       Obrigada de coração por fazer parte desse momento. Cada gesto vira memória boa por aqui.✨ — Manuh<br>
@@ -302,6 +314,7 @@
   <script src="app.js" defer></script>
 </body>
 </html>
+
 
 
 
