@@ -12,7 +12,7 @@
   <meta property="og:description" content="Você é nosso convidado! Veja data, local e deixe seu recado." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/og-image.jpg" />
-  <meta property="og:url" content="https://seu-dominio.com" />
+  
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,11 +24,10 @@
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Ícones / Manifest (opcional) -->
+
   <!-- <link rel="icon" href="/favicon.ico"> -->
   <!-- <link rel="manifest" href="/site.webmanifest"> -->
-
-  <!-- Dados estruturados do evento -->
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -60,7 +59,7 @@
 
 
   <nav aria-label="Seções do convite">
-  <!-- Botão sanduíche (aparece só no mobile via CSS) -->
+ 
   <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
     <span class="menu-bars" aria-hidden="true"></span> Menu
   </button>
@@ -74,41 +73,78 @@
 </nav>
 
   <main>
-    <!-- HOME -->
     <section id="home" class="conteudo-secao active" aria-labelledby="home-title">
-       <div class="carrossel carrossel-container" tabindex="0" aria-roledescription="carrossel" aria-label="Fotos da Manu">
-        <div class="carrossel-slide active">
-          <img src="assets/foto1.jpg"
-               alt="Manu 1"
-               class="foto-carrossel" loading="lazy" decoding="async" />
-        </div>
-        <div class="carrossel-slide">
-          <img src="assets/foto2.jpg"
-               alt="Manu 2"
-               class="foto-carrossel" loading="lazy" decoding="async" />
-        </div>
-        
-        <div class="carrossel-slide">
-          <img src="assets/foto4.jpg"
-               alt="Manu 2"
-               class="foto-carrossel" loading="lazy" decoding="async" />
-        </div>
 
-        <!-- Botões -->
-        <button class="carrossel-btn prev-btn" aria-label="Foto anterior" type="button">&lt;</button>
-        <button class="carrossel-btn next-btn" aria-label="Próxima foto" type="button">&gt;</button>
+  <!-- Carrossel -->
+  <div class="carrossel carrossel-container" tabindex="0" aria-roledescription="carrossel" aria-label="Fotos da Manu">
+    <div class="carrossel-slide active">
+      <img src="assets/foto1.jpg" alt="Manu 1" class="foto-carrossel" loading="lazy" decoding="async" />
+    </div>
+    <div class="carrossel-slide">
+      <img src="assets/foto2.jpg" alt="Manu 2" class="foto-carrossel" loading="lazy" decoding="async" />
+    </div>
+    <div class="carrossel-slide">
+      <img src="assets/foto4.jpg" alt="Manu 3" class="foto-carrossel" loading="lazy" decoding="async" />
+    </div>
 
-        <!-- Dots: devem bater com nº de slides (2 no exemplo) -->
-        <div class="dots-container" role="tablist" aria-label="Navegação do carrossel">
-          <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-          <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-        </div>
+    <button class="carrossel-btn prev-btn" aria-label="Foto anterior" type="button">&lt;</button>
+    <button class="carrossel-btn next-btn" aria-label="Próxima foto" type="button">&gt;</button>
+
+    <div class="dots-container" role="tablist" aria-label="Navegação do carrossel"></div>
+  </div>
+
+  
+  <div id="detalhes" class="xv-bloco" aria-labelledby="xv-title" style="margin-top:16px">
+    <h2 id="xv-title">Detalhes da festa</h2>
+
+    <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
+      <h3>Falta pouco!</h3>
+      <div class="contador-numeros" aria-live="polite">
+        <div><span id="dias">00</span><p>Dias</p></div>
+        <div><span id="horas">00</span><p>Horas</p></div>
+        <div><span id="minutos">00</span><p>Minutos</p></div>
+        <div><span id="segundos">00</span><p>Segundos</p></div>
       </div>
-    </section>
+    </div>
+
+    <div class="info">
+      <h3>Onde e quando?</h3>
+      <p><strong>Data:</strong> Sábado, 20 de setembro de 2025</p>
+      <p><strong>Horário:</strong> 19:00</p>
+      <p><strong>Local:</strong> Prisma Hall</p>
+
+      <p>
+        <a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7" target="_blank" rel="noopener" class="link-mapa">
+          Ver no mapa
+        </a>
+      </p>
+
+      <!-- Mapa responsivo -->
+      <div class="mapa-embed" id="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="confirmar-presenca" style="margin-top:12px">
+        <a
+          href="https://wa.me/556192138387?text=Ol%C3%A1,%20gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nesse%20dia%20t%C3%A3o%20especial!"
+          target="_blank"
+          class="btn-confirmar">
+          Confirmar Presença
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- XV DA MANU -->
     <section id="xv-da-manu" class="conteudo-secao" aria-labelledby="xv-title">
-      <h2 id="xv-title">XV da Manu</h2>
+      <h2 id="xv-title">XV da Manu</h2 style="margin-top:center">
 
       <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
         <h3>Falta pouco!</h3>
@@ -206,4 +242,5 @@
   <script src="app.js" defer></script>
 </body>
 </html>
+
 
