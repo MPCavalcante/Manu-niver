@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Manuella Cavalcante - 15 Anos</title>
+  <meta name="description" content="Convite digital dos 15 anos de Manuella Cavalcante. Data, local, recados e fotos." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Manuella Cavalcante - 15 Anos" />
+  <meta property="og:description" content="Você é nosso convidado! Veja data, local e deixe seu recado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.jpg" />
+  <meta property="og:url" content="https://seu-dominio.com" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Ícones / Manifest (opcional) -->
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+  <!-- <link rel="manifest" href="/site.webmanifest"> -->
+
+  <!-- Dados estruturados do evento -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "15 Anos - Manuella Cavalcante",
+    "startDate": "2025-08-20T19:00:00-03:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "Prisma Hall",
+      "address": "Quadra 136, 21 - Jardim Ceu Azul, Valparaíso de Goiás - GO, 72871-067, Brasil"
+    },
+    "image": ["/assets/og-image.jpg"],
+    "description": "Convite digital dos 15 anos de Manuella.",
+    "organizer": {"@type": "Person","name": "Manuella Cavalcante"}
+  }
+  </script>
+</head>
+<body>
+  <header class="novo-header" role="banner">
+    <div class="header-conteudo">
+      <img src="assets/detalhe-flor-topo.png" alt="Detalhe de flor" class="detalhe-topo">
+      <h1>Manuella Cavalcante</h1>
+      <p aria-label="Quinze anos">• 15 ANOS •</p>
+      <img src="assets/detalhe-flor-baixo.png" alt="Detalhe de flor" class="detalhe-baixo">
+    </div>
+  </header>
+
+
+  <nav aria-label="Seções do convite">
+  <!-- Botão sanduíche (aparece só no mobile via CSS) -->
+  <button class="menu-toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+    <span class="menu-bars" aria-hidden="true"></span> Menu
+  </button>
+
+  <ul id="menu">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#xv-da-manu">XV DA MANU</a></li>
+    <li><a href="#historia">HISTÓRIA</a></li>
+    <li><a href="#presentes">PRESENTES</a></li>
+    <li><a href="#recados">RECADOS</a></li>
+    </ul>
+</nav>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="conteudo-secao active" aria-labelledby="home-title">
+       <div class="carrossel carrossel-container" tabindex="0" aria-roledescription="carrossel" aria-label="Fotos da Manu">
+        <div class="carrossel-slide active">
+          <img src="assets/foto1.jpg"
+               alt="Manu 1"
+               class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        <div class="carrossel-slide">
+          <img src="assets/foto2.jpg"
+               alt="Manu 2"
+               class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        
+        <div class="carrossel-slide">
+          <img src="assets/foto4.jpg"
+               alt="Manu 2"
+               class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+
+        <!-- Botões -->
+        <button class="carrossel-btn prev-btn" aria-label="Foto anterior" type="button">&lt;</button>
+        <button class="carrossel-btn next-btn" aria-label="Próxima foto" type="button">&gt;</button>
+
+        <!-- Dots: devem bater com nº de slides (2 no exemplo) -->
+        <div class="dots-container" role="tablist" aria-label="Navegação do carrossel">
+          <button class="dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+          <button class="dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- XV DA MANU -->
+    <section id="xv-da-manu" class="conteudo-secao" aria-labelledby="xv-title">
+      <h2 id="xv-title">XV da Manu</h2>
+
+      <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
+        <h3>Falta pouco!</h3>
+        <div class="contador-numeros" aria-live="polite">
+          <div><span id="dias">00</span><p>Dias</p></div>
+          <div><span id="horas">00</span><p>Horas</p></div>
+          <div><span id="minutos">00</span><p>Minutos</p></div>
+          <div><span id="segundos">00</span><p>Segundos</p></div>
+        </div>
+      </div>
+
+      <div class="info">
+        <h3>Onde e quando?</h3>
+        <p><strong>Data:</strong> Sábado, 20 de setembro de 2025</p>
+        <p><strong>Horário:</strong> 19:00</p>
+        <strong>Local:</strong> Prisma Hall
+        <p><a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7"
+          target="_blank" rel="noopener"
+          class="link-mapa"
+        >Ver no mapa</a></p>
+        <div class="mapa-embed">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+
+        <p><div class="confirmar-presenca">
+            <a 
+             href="https://wa.me/556192138387?text=Ol%C3%A1,%20gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nesse%20dia%20t%C3%A3o%20especial!" 
+             target="_blank" 
+             class="btn-confirmar">
+             Confirmar Presença
+            </a>
+        </div>
+      </div>
+
+      
+
+
+    </section>
+
+    <!-- HISTÓRIA -->
+    <section id="historia" class="conteudo-secao" aria-labelledby="hist-title">
+      <h2 id="hist-title">Minha História</h2>
+      <p>
+        Desde pequena, sempre sonhei com esse dia. Um dia mágico, onde a princesa dos contos de fadas se torna
+        realidade. Com meus 15 anos, vejo que cada passo, cada alegria, cada desafio me preparou para esse momento.
+        Agradeço a todos que me acompanharam nessa jornada e me ajudaram a crescer e a realizar este sonho. Espero que
+        vocês se divirtam tanto quanto eu! Com carinho, Manuella.
+      </p>
+    </section>
+
+    <!-- PRESENTES -->
+    <section id="presentes" class="conteudo-secao" aria-labelledby="pres-title">
+      <h2 id="pres-title">Presentes</h2>
+      <p>Sua presença já é o maior presente! Mas, se quiser me presentear, aqui está o Pix.</p>
+      <img src="https://via.placeholder.com/560x560?text=QR+Code+Pix" alt="QR Code para presente em Pix"
+           class="qr-code" loading="lazy" decoding="async" />
+    </section>
+
+    <!-- RECADOS -->
+       <section id="recados" class="conteudo-secao" aria-labelledby="recados-title">
+      <h2 id="recados-title">Deixe uma mensagem!</h2>
+
+      <form id="form-recados" class="form-recados" action="#" novalidate>
+        <div class="field">
+          <label for="nome-recado">Seu Nome</label>
+          <input type="text" id="nome-recado" name="nome" autocomplete="name" maxlength="80" placeholder="Digite seu nome">
+        </div>
+
+        <div class="field">
+          <label for="mensagem-recado">Mensagem</label>
+          <textarea id="mensagem-recado" name="mensagem" rows="5" maxlength="1000" placeholder="Escreva uma mensagem bonita para a Manu ✨"></textarea>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="botao-submit">Enviar Recado</button>
+          <div id="status-recado" class="aviso-recados" role="status" aria-live="polite"></div>
+        </div>
+      </form>
+
+        <div id="lista-recados" class="lista-recados" aria-live="polite" aria-busy="false"></div>
+    </section>
+
+  
+  <noscript>
+    <p style="text-align:center">Ative o JavaScript para ver o carrossel, recados e contador.</p>
+  </noscript>
+
+  <!-- Defer para carregar após HTML -->
+  <script src="app.js" defer></script>
+</body>
+</html>
