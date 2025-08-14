@@ -445,3 +445,31 @@
   });
 })();
 
+// Modal do QR Code
+(function () {
+  const modal = document.getElementById('qr-modal');
+  if (!modal) return;
+
+  const openers = Array.from(document.querySelectorAll('.qr-open, .qr-card .qr-code'));
+  const closeBtn = modal.querySelector('.qr-close');
+  let lastFocus = null;
+
+  const open = () => {
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  };
+
+  const close = () => {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  };
+
+  openers.forEach(el => el.addEventListener('click', open));
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => { if (!modal.hidden && e.key === 'Escape') close(); });
+})();
+
