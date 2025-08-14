@@ -202,12 +202,72 @@
 
     <!-- PRESENTES -->
     <section id="presentes" class="conteudo-secao" aria-labelledby="pres-title">
-      <h2 id="pres-title">Presentes</h2>
-      <p>Sua presença já é o maior presente! Mas, se quiser me presentear, aqui está o Pix.</p>
-      <img src="assets/QRCODE.jpg" 
-          alt="QR Code para presente em Pix"
-          class="qr-code" loading="lazy" decoding="async" />
-    </section>
+  <h2 id="pres-title" style="text-align:center;">ATUALIZAÇÃO OFICIAL DOS 15 💜</h2>
+
+  <div style="max-width:760px;margin:10px auto 0;line-height:1.75;">
+    <p>
+      Cheguei ao 15 “Porém com o rostinho de neném” o trist dessa fase e que as moedas de 1 real que peço pro meu pai 
+      já não são suficientes...😂 (chega nem perto do valor da minha maquiagem)
+    </p>
+    <p>
+      você ainda está na dúvida do que comprar, pode me presentear
+      com <strong>PIX</strong>. Eu uso para comprar ótimos presentes e deixar o dia ainda mais especial.
+    </p>
+
+    <!-- Chave PIX definida no HTML -->
+    <p style="margin:12px 0 6px;">
+      <strong>Chave PIX:</strong>
+      <span id="pix-key" style="word-break:break-all;">715.124.501-70</span>
+    </p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+      <button type="button" class="btn-confirmar" id="copy-pix">Copiar chave PIX</button>
+    </div>
+
+    <p style="margin:16px 0 8px;">Leia o QRCODE abaixo:</p>
+
+    <!-- QR Code logo abaixo da mensagem -->
+    <figure class="qr-card" style="text-align:center;margin:8px auto 0;">
+      <!-- Clique abre em tela cheia (facilita escanear no desktop) -->
+      <a href="assets/QRCODE.jpg" target="_blank" rel="noopener">
+        <img
+          src="assets/QRCODE.jpeg"
+          alt="QR Code do PIX"
+          class="qr-code"
+          loading="lazy"
+          decoding="async"
+          style="display:inline-block;max-width:320px;width:100%;height:auto;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.08);"
+        >
+      </a>
+      
+    </figure>
+
+    <p style="margin-top:16px;">
+      Obrigada de coração por fazer parte desse momento. Cada gesto vira memória boa por aqui.✨ — Manu<br>
+      
+    </p>
+  </div>
+</section>
+
+<script>
+  // Botão "Copiar chave PIX"
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('copy-pix');
+    const keyEl = document.getElementById('pix-key');
+    if (btn && keyEl) {
+      btn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(keyEl.textContent.trim());
+          btn.textContent = 'Chave copiada! ✅';
+          setTimeout(() => btn.textContent = 'Copiar chave PIX', 1600);
+        } catch {
+          alert('Não foi possível copiar. Copie manualmente: ' + keyEl.textContent.trim());
+        }
+      });
+    }
+  });
+</script>
+
     
     <!-- RECADOS -->
        <section id="recados" class="conteudo-secao" aria-labelledby="recados-title">
