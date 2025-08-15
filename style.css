@@ -128,30 +128,52 @@ main{ max-width:1100px; margin:20px auto; padding:0 16px; }
 
 /* CONTADOR + INFO */
 
+/* CONTADOR (4 colunas em qualquer tela) */
 .contador{
-  background:var(--lilac-light);
-  border-radius:16px; padding:1.25rem; margin-top:1.25rem; text-align:center;
+  background: var(--lilac-light);
+  border-radius:16px;
+  padding:1.25rem;
+  margin-top:1.25rem;
+  text-align:center;
 }
-.contador h3{ color:var(--purple-dark); font-size:clamp(1.1rem,3.8vw,1.6rem); margin-bottom:.75rem; }
 
-/* Layout 2 colunas no mobile, 4 no desktop */
+.contador h3{
+  color:var(--purple-dark);
+  font-size:clamp(1.1rem,3.8vw,1.6rem);
+  margin-bottom:.75rem;
+}
+
+/* sempre 4 colunas */
 .contador-numeros{
-  display:flex; flex-wrap:wrap; align-items:stretch; justify-content:center;
-  gap:12px; margin:0 auto; width:100%; box-sizing:border-box;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+  align-items:stretch;
 }
+
 .contador-numeros > div{
-  background:var(--purple-main); color:#fff; border-radius:14px; padding:12px 10px; text-align:center;
-  box-sizing:border-box; flex:1 1 calc(50% - 12px); min-width:0;
+  background: var(--purple-main);
+  color:#fff;
+  border-radius:14px;
+  padding:10px 8px;
+  text-align:center;
+  min-width:0; /* evita quebra */
 }
-@media (min-width:560px){
-  .contador-numeros > div{ flex:1 1 calc(25% - 12px); }
-}
+
 .contador-numeros span{
-  display:block; font-weight:700; font-size:clamp(22px,7vw,36px); line-height:1.1;
+  display:block;
+  font-weight:700;
+  font-size:clamp(18px, 5.2vw, 28px); /* reduz no mobile, cresce no desktop */
+  line-height:1.1;
 }
+
 .contador-numeros p{
-  margin-top:6px; font-size:clamp(12px,3.2vw,14px); line-height:1.2; word-break:break-word;
+  margin-top:4px;
+  font-size:clamp(10px, 3.2vw, 13px);
+  line-height:1.2;
+  word-break:break-word;
 }
+
 
 .info{ text-align:center; margin-top:1.5rem; }
 .info h3{ color:var(--purple-dark); font-size:1.5rem; margin-bottom:.5rem; }
@@ -308,3 +330,4 @@ main{ max-width:1100px; margin:20px auto; padding:0 16px; }
   0%{ background-position:100% 0; }
   100%{ background-position:0 0; }
 }
+
