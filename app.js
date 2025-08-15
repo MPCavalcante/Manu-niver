@@ -210,3 +210,52 @@
   modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
   document.addEventListener('keydown', (e) => { if (!modal.hidden && e.key === 'Escape') close(); });
 })();
+
+
+// Borboletas
+(function () {
+  const sky = document.getElementById('butterfly-sky');
+  if (!sky) return;
+
+   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let onScreen = 0;
+  const MAX = 15;          
+  const INTERVAL = 1200;   
+
+  function spawn() {
+    if (onScreen >= MAX) return;
+
+    const el = document.createElement('div');
+    el.className = 'bf';
+
+    const wings = document.createElement('div');
+    wings.className = 'wings';
+    el.appendChild(wings);
+
+    // randomiza tamanho posição e duração
+    const size = Math.round(22 + Math.random() * 20);           
+    const left = Math.round(Math.random() * 100);                 
+    const drift = (Math.random() * 80 - 40).toFixed(1) + 'vw';    
+    const dur = (10 + Math.random() * 8).toFixed(1) + 's';        
+
+    el.style.left = left + 'vw';
+    el.style.setProperty('--size', size + 'px');
+    el.style.setProperty('--drift', drift);
+    el.style.setProperty('--dur', dur);
+    el.style.animationDelay = (Math.random() * 0.8).toFixed(2) + 's';
+
+    sky.appendChild(el);
+    onScreen++;
+
+    el.addEventListener('animationend', () => {
+      el.remove();
+      onScreen--;
+    });
+  }
+
+  for (let i = 0; i < 4; i++) setTimeout(spawn, i * 350);
+
+    setInterval(spawn, INTERVAL);
+})();
+
