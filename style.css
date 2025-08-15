@@ -43,13 +43,13 @@ body{ font-family:var(--font-body); background:var(--lilac-bg); color:var(--text
 .header-conteudo img{ display:block; height:auto; }
 
 .detalhe-topo{
-  width: 82%;                
+  width: 58%;                
   max-width: 520px;
   margin-inline: auto;
   margin-top: -4px;
 }
 .detalhe-baixo{
-  width: 58%;
+  width: 38%;
   max-width: 420px;
   margin-inline: auto;
   margin-top: -6px;
@@ -286,5 +286,6 @@ main{ max-width:1100px; margin:20px auto; padding:0 16px; }
   0%{ background-position:100% 0; }
   100%{ background-position:0 0; }
 }
+
 
 
