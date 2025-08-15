@@ -503,5 +503,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+// Toggle universal dos Google Forms (Home e Detalhes)
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('[data-form-toggle]');
+  if (!btn) return;
+
+  const id = btn.getAttribute('data-form-toggle');
+  const wrap = document.querySelector(`[data-form-wrap="${id}"]`);
+  if (!wrap) return console.warn('Form wrap não encontrado para id:', id);
+
+  const abrir = !wrap.classList.contains('is-open');
+  wrap.classList.toggle('is-open', abrir);
+  wrap.classList.toggle('is-collapsed', !abrir);
+  wrap.setAttribute('aria-hidden', (!abrir).toString());
+  btn.setAttribute('aria-expanded', abrir.toString());
+  btn.textContent = abrir ? 'Ocultar formulário' : 'Confirmar Presença';
+  if (abrir) wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
 
 
