@@ -473,3 +473,31 @@
   document.addEventListener('keydown', (e) => { if (!modal.hidden && e.key === 'Escape') close(); });
 })();
 
+// Abre/fecha o Google Forms sem sair da página
+document.addEventListener('DOMContentLoaded', () => {
+  const btn  = document.getElementById('toggle-form');
+  const wrap = document.getElementById('form-wrap');
+  if (!btn || !wrap) return;
+
+  const open = () => {
+    wrap.classList.add('is-open');
+    wrap.classList.remove('is-collapsed');
+    wrap.setAttribute('aria-hidden', 'false');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = 'Ocultar formulário';
+    wrap.scrollIntoView({ behavior:'smooth', block:'start' });
+  };
+
+  const close = () => {
+    wrap.classList.remove('is-open');
+    wrap.classList.add('is-collapsed');
+    wrap.setAttribute('aria-hidden', 'true');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Confirmar Presença';
+  };
+
+  btn.addEventListener('click', () => {
+    const isOpen = wrap.classList.contains('is-open');
+    isOpen ? close() : open();
+  });
+});
