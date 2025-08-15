@@ -193,14 +193,31 @@
         </iframe>
 
 
-        <p><div class="confirmar-presenca">
-            <a 
-             href="https://wa.me/556192138387?text=Ol%C3%A1,%20gostaria%20de%20confirmar%20minha%20presen%C3%A7a%20nesse%20dia%20t%C3%A3o%20especial!" 
-             target="_blank" 
-             class="btn-confirmar">
-             Confirmar Presença
-            </a>
-        </div>
+        <div class="confirmar-presenca" style="margin-top:12px">
+  <button type="button"
+          class="btn-confirmar"
+          id="toggle-form-1"
+          data-form-toggle="1"
+          aria-expanded="false"
+          aria-controls="form-wrap-1">
+    Confirmar Presença
+  </button>
+
+  <div id="form-wrap-1"
+       class="form-embed is-collapsed"
+       data-form-wrap="1"
+       aria-hidden="true">
+    <div class="form-skeleton">Carregando formulário…</div>
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdhKz8EuZmMs9_7yU1RlH0S4EyVAOHRQmyKtexsmFeaQ3nmnQ/viewform?embedded=true"
+      title="Formulário de confirmação de presença"
+      width="100%" height="100%" frameborder="0"
+      marginheight="0" marginwidth="0"
+      onload="this.previousElementSibling.style.display='none'">
+    </iframe>
+  </div>
+</div>
+
       </div>
 
       
@@ -333,6 +350,7 @@
   <script src="app.js" defer></script>
 </body>
 </html>
+
 
 
 
