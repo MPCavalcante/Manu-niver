@@ -5,29 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Manuella Cavalcante - 15 Anos</title>
-  <meta name="description" content="Convite digital dos 15 anos de Manuella Cavalcante. Data, local, recados e fotos." />
+  <meta name="description" content="Convite digital dos 15 anos de Manuella Cavalcante. Data, local e presentes." />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Manuella Cavalcante - 15 Anos" />
-  <meta property="og:description" content="Você é nosso convidado! Veja data, local e deixe seu recado." />
+  <meta property="og:description" content="Você é nosso convidado! Veja data, local e confirme presença." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/og-image.jpg" />
   
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 
-
-  <!-- <link rel="icon" href="/favicon.ico"> -->
-  <!-- <link rel="manifest" href="/site.webmanifest"> -->
-  
+  <!-- Dados estruturados (opcional) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,6 +41,7 @@
   </script>
 </head>
 <body>
+  <!-- HEADER -->
   <header class="novo-header" role="banner">
     <div class="header-conteudo">
       <img src="assets/detalhe-flor-topo.png" alt="Detalhe de flor" class="detalhe-topo">
@@ -57,114 +51,110 @@
     </div>
   </header>
 
-
+  <!-- NAV -->
   <nav aria-label="Seções do convite">
- 
-  
-  <ul id="menu">
-    <li><a href="#home">HOME</a></li>
-    <li><a href="#xv-da-manu">DETALHES</a></li>
-    <li><a href="#historia">HISTÓRIA</a></li>
-    <li><a href="#presentes">PRESENTES</a></li>
+    <ul id="menu">
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#xv-da-manu">DETALHES</a></li>
+      <li><a href="#historia">HISTÓRIA</a></li>
+      <li><a href="#presentes">PRESENTES</a></li>
     </ul>
-</nav>
+  </nav>
 
   <main>
+    <!-- HOME -->
     <section id="home" class="conteudo-secao active" aria-labelledby="home-title">
+      <!-- Carrossel -->
+      <div class="carrossel carrossel-container" tabindex="0" aria-roledescription="carrossel" aria-label="Fotos da Manu">
+        <div class="carrossel-slide active">
+          <img src="assets/foto2.jpg" alt="Manu 1" class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        <div class="carrossel-slide">
+          <img src="assets/foto4.jpg" alt="Manu 2" class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        <div class="carrossel-slide">
+          <img src="assets/foto5.jpeg" alt="Manu 3" class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        <div class="carrossel-slide">
+          <img src="assets/foto6.jpg" alt="Manu 4" class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
+        <div class="carrossel-slide">
+          <img src="assets/foto1.jpg" alt="Manu 5" class="foto-carrossel" loading="lazy" decoding="async" />
+        </div>
 
-  <!-- Carrossel -->
-  <div class="carrossel carrossel-container" tabindex="0" aria-roledescription="carrossel" aria-label="Fotos da Manu">
-    <div class="carrossel-slide active">
-      <img src="assets/foto2.jpg" alt="Manu 1" class="foto-carrossel" loading="lazy" decoding="async" />
-    </div>
-    <div class="carrossel-slide">
-      <img src="assets/foto4.jpg" alt="Manu 2" class="foto-carrossel" loading="lazy" decoding="async" />
-    </div>
-    <div class="carrossel-slide">
-      <img src="assets/foto5.jpeg" alt="Manu 3" class="foto-carrossel" loading="lazy" decoding="async" />
-    </div>
-    <div class="carrossel-slide">
-      <img src="assets/foto6.jpg" alt="Manu 4" class="foto-carrossel" loading="lazy" decoding="async" />
-    </div>
-    <div class="carrossel-slide">
-      <img src="assets/foto1.jpg" alt="Manu 5" class="foto-carrossel" loading="lazy" decoding="async" />
-    </div>
-
-    <button class="carrossel-btn prev-btn" aria-label="Foto anterior" type="button">&lt;</button>
-    <button class="carrossel-btn next-btn" aria-label="Próxima foto" type="button">&gt;</button>
-
-    <div class="dots-container" role="tablist" aria-label="Navegação do carrossel"></div>
-  </div>
-
-  
-  <div id="detalhes" class="xv-bloco" aria-labelledby="xv-title" style="margin-top:16px">
-    <h2 id="xv-title">Detalhes da festa</h2>
-
-    <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
-      <h3>Falta pouco!</h3>
-      <div class="contador-numeros" aria-live="polite">
-        <div><span id="dias">00</span><p>Dias</p></div>
-        <div><span id="horas">00</span><p>Hrs</p></div>
-        <div><span id="minutos">00</span><p>Min</p></div>
-        <div><span id="segundos">00</span><p>Seg</p></div>
-      </div>
-    </div>
-
-    <div class="info">
-      <h3>Onde e quando?</h3>
-      <p><strong>Data:</strong> Sábado, 20 de setembro de 2025</p>
-      <p><strong>Horário:</strong> 19:00</p>
-      <p><strong>Local:</strong> Prisma Hall</p>
-
-      <p>
-        <a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7" target="_blank" rel="noopener" class="link-mapa">
-          Ver no mapa
-        </a>
-      </p>
-
-      <!-- Mapa responsivo -->
-      <div class="mapa-embed" id="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <button class="carrossel-btn prev-btn" aria-label="Foto anterior" type="button">&lt;</button>
+        <button class="carrossel-btn next-btn" aria-label="Próxima foto" type="button">&gt;</button>
+        <div class="dots-container" role="tablist" aria-label="Navegação do carrossel"></div>
       </div>
 
-     <div class="confirmar-presenca" style="margin-top:12px">
-  <button type="button"
-          class="btn-confirmar"
-          id="toggle-form-1"
-          data-form-toggle="1"
-          aria-expanded="false"
-          aria-controls="form-wrap-1">
-    Confirmar Presença
-  </button>
+      <!-- Bloco de detalhes na HOME -->
+      <div id="detalhes" class="xv-bloco" aria-labelledby="xv-title" style="margin-top:16px">
+        <h2 id="xv-title">Detalhes da festa</h2>
 
-  <div id="form-wrap-1"
-       class="form-embed is-collapsed"
-       data-form-wrap="1"
-       aria-hidden="true">
-    <div class="form-skeleton">Carregando formulário…</div>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdhKz8EuZmMs9_7yU1RlH0S4EyVAOHRQmyKtexsmFeaQ3nmnQ/viewform?embedded=true"
-      title="Formulário de confirmação de presença"
-      width="100%" height="100%" frameborder="0"
-      marginheight="0" marginwidth="0"
-      onload="this.previousElementSibling.style.display='none'">
-    </iframe>
-  </div>
-</div>
+        <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
+          <h3>Falta pouco!</h3>
+          <div class="contador-numeros" aria-live="polite">
+            <div><span id="dias">00</span><p>Dias</p></div>
+            <div><span id="horas">00</span><p>Hrs</p></div>
+            <div><span id="minutos">00</span><p>Min</p></div>
+            <div><span id="segundos">00</span><p>Seg</p></div>
+          </div>
+        </div>
 
-    </div>
-  </div>
-</section>
+        <div class="info">
+          <h3>Onde e quando?</h3>
+          <p><strong>Data:</strong> Sábado, 20 de setembro de 2025</p>
+          <p><strong>Horário:</strong> 19:00</p>
+          <p><strong>Local:</strong> Prisma Hall</p>
 
+          <p>
+            <a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7" target="_blank" rel="noopener" class="link-mapa">
+              Ver no mapa
+            </a>
+          </p>
 
-    <!-- XV DA MANU -->
-    <section id="xv-da-manu" class="conteudo-secao" aria-labelledby="xv-title">
-      <h2 id="xv-title">Detalhes</h2 style="margin-top:center">
+          <!-- Mapa responsivo -->
+          <div class="mapa-embed" id="mapa">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Google Forms (HOME) -->
+          <div class="confirmar-presenca" style="margin-top:12px">
+            <button
+              type="button"
+              class="btn-confirmar"
+              data-form-toggle="1"
+              aria-expanded="false"
+              aria-controls="form-wrap-1">
+              Confirmar Presença
+            </button>
+
+            <div id="form-wrap-1"
+                 class="form-embed is-collapsed"
+                 data-form-wrap="1"
+                 aria-hidden="true">
+              <div class="form-skeleton">Carregando formulário…</div>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdhKz8EuZmMs9_7yU1RlH0S4EyVAOHRQmyKtexsmFeaQ3nmnQ/viewform?embedded=true"
+                title="Formulário de confirmação de presença"
+                width="100%" height="100%" frameborder="0"
+                marginheight="0" marginwidth="0"
+                onload="this.previousElementSibling.style.display='none'">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETALHES (seção própria) -->
+    <section id="xv-da-manu" class="conteudo-secao" aria-labelledby="xv-title-2">
+      <h2 id="xv-title-2">Detalhes</h2>
 
       <div class="contador" data-evento="2025-09-20T19:00:00-03:00">
         <h3>Falta pouco!</h3>
@@ -180,192 +170,138 @@
         <h3>Onde e quando?</h3>
         <p><strong>Data:</strong> Sábado, 20 de setembro de 2025</p>
         <p><strong>Horário:</strong> 19:00</p>
-        <strong>Local:</strong> Prisma Hall
-        <p><a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7"
-          target="_blank" rel="noopener"
-          class="link-mapa"
-        >Ver no mapa</a></p>
+        <p><strong>Local:</strong> Prisma Hall</p>
+        <p>
+          <a href="https://maps.app.goo.gl/ifdhhnN8R4yG49Wj7" target="_blank" rel="noopener" class="link-mapa">
+            Ver no mapa
+          </a>
+        </p>
+
         <div class="mapa-embed">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d958.5613893582189!2d-48.012!3d-16.0527423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935987542b7ffd4f%3A0x96244e5defd48095!2sPrisma%20Hall!5e0!3m2!1spt-BR!2sbr!4v1755201453832!5m2!1spt-BR!2sbr"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          </iframe>
+        </div>
 
-
+        <!-- Google Forms (DETALHES) -->
         <div class="confirmar-presenca" style="margin-top:12px">
-  <button type="button"
-          class="btn-confirmar"
-          id="toggle-form-1"
-          data-form-toggle="1"
-          aria-expanded="false"
-          aria-controls="form-wrap-1">
-    Confirmar Presença
-  </button>
+          <button
+            type="button"
+            class="btn-confirmar"
+            data-form-toggle="2"
+            aria-expanded="false"
+            aria-controls="form-wrap-2">
+            Confirmar Presença
+          </button>
 
-  <div id="form-wrap-1"
-       class="form-embed is-collapsed"
-       data-form-wrap="1"
-       aria-hidden="true">
-    <div class="form-skeleton">Carregando formulário…</div>
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdhKz8EuZmMs9_7yU1RlH0S4EyVAOHRQmyKtexsmFeaQ3nmnQ/viewform?embedded=true"
-      title="Formulário de confirmação de presença"
-      width="100%" height="100%" frameborder="0"
-      marginheight="0" marginwidth="0"
-      onload="this.previousElementSibling.style.display='none'">
-    </iframe>
-  </div>
-</div>
-
+          <div id="form-wrap-2"
+               class="form-embed is-collapsed"
+               data-form-wrap="2"
+               aria-hidden="true">
+            <div class="form-skeleton">Carregando formulário…</div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdhKz8EuZmMs9_7yU1RlH0S4EyVAOHRQmyKtexsmFeaQ3nmnQ/viewform?embedded=true"
+              title="Formulário de confirmação de presença"
+              width="100%" height="100%" frameborder="0"
+              marginheight="0" marginwidth="0"
+              onload="this.previousElementSibling.style.display='none'">
+            </iframe>
+          </div>
+        </div>
       </div>
-
-      
-
-
     </section>
 
     <!-- HISTÓRIA -->
     <section id="historia" class="conteudo-secao" aria-labelledby="hist-title">
       <h2 id="hist-title">Minha História</h2>
       <p>
-        Desde pequena, sempre sonhei com esse dia. Um dia mágico, onde a princesa dos contos de fadas se torna realidade. 
-        Com meus 15 anos, vejo que cada passo, cada alegria, cada desafio me preparou para esse momento. 
+        Desde pequena, sempre sonhei com esse dia. Um dia mágico, onde a princesa dos contos de fadas se torna realidade.
+        Com meus 15 anos, vejo que cada passo, cada alegria, cada desafio me preparou para esse momento.
         Agradeço a todos que me acompanharam nessa jornada e me ajudaram a crescer e a realizar este sonho.
         Espero que vocês se divirtam tanto quanto eu! ❤️😊 Com carinho, Manuella.
       </p>
     </section>
 
-    <!-- PRESENTES -->
+    <!-- PRESENTES / PIX -->
     <section id="presentes" class="conteudo-secao" aria-labelledby="pres-title">
-  <h2 id="pres-title" style="text-align:center;">ATUALIZAÇÃO OFICIAL DOS 15 💜</h2>
+      <h2 id="pres-title" style="text-align:center;">ATUALIZAÇÃO OFICIAL DOS 15 💜</h2>
 
-  <div style="max-width:760px;margin:10px auto 0;line-height:1.75;">
-    <p>
-     Cheguei aos 15!!! 🥳🥳🥳
-    O triste dessa fase é que as moedas de 1 real já não são suficientes para as maquiagens 😄
-    </p>
-    <p>
-    Tá na dúvida de como me presentear?
-    Presenteia com <strong>PIX</strong>. que uso para comprar ótimos presentes e deixar esse dia ainda mais especial ❤️
-    </p>
+      <div style="max-width:760px;margin:10px auto 0;line-height:1.75;">
+        <p>
+          Cheguei aos 15!!! 🥳🥳🥳
+          O triste dessa fase é que as moedas de 1 real já não são suficientes para as maquiagens 😄
+        </p>
+        <p>
+          Tá na dúvida de como me presentear?
+          Presenteia com <strong>PIX</strong>. Uso para comprar ótimos presentes e deixar esse dia ainda mais especial ❤️
+        </p>
 
-    <!-- Chave PIX definida no HTML -->
-    <p style="margin:12px 0 6px;">
-      <strong>Chave PIX:</strong>
-      <span id="pix-key" style="word-break:break-all;">715.124.501-70</span>
-    </p>
+        <p style="margin:12px 0 6px;">
+          <strong>Chave PIX:</strong>
+          <span id="pix-key" style="word-break:break-all;">715.124.501-70</span>
+        </p>
 
-    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px;">
-      <button type="button" class="btn-confirmar" id="copy-pix">Copiar chave PIX</button>
-    </div>
-
-    <p style="margin:16px 0 8px;">Leia o QRCODE abaixo:</p>
-
-    <!-- QR Code logo abaixo da mensagem -->
-    <figure class="qr-card">
-  <img src="assets/QRCODE.jpeg"
-       alt="QR Code do PIX"
-       class="qr-code"
-       width="320" height="320">
-    <figcaption></figcaption>
-
-  <!-- opcional: botão visível para acessibilidade -->
-  <button type="button" class="btn-confirmar qr-open" aria-haspopup="dialog">
-    Ampliar QR
-  </button>
-</figure>
-
-<!-- Modal/Overlay -->
-<div id="qr-modal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" hidden>
-  <div class="qr-dialog" role="document">
-    <button class="qr-close" aria-label="Fechar (Esc)">×</button>
-    <h3 id="qr-title" class="sr-only">QR Code em tamanho grande</h3>
-
-    <img src="assets/QRCODE.jpeg"
-         alt=""
-         class="qr-full">
-
-    <a class="qr-download" href="assets/QRCODE.jpeg" download="PIX-Manu.jpg">Baixar QR</a>
-  </div>
-</div>
-
-    <p style="margin-top:16px;">
-      Obrigada de coração por fazer parte desse momento. Cada gesto vira memória boa por aqui.✨ — Manuh<br>
-      
-    </p>
-  </div>
-</section>
-
-<script>
-  // Botão "Copiar chave PIX"
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('copy-pix');
-    const keyEl = document.getElementById('pix-key');
-    if (btn && keyEl) {
-      btn.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(keyEl.textContent.trim());
-          btn.textContent = 'Chave copiada! ✅';
-          setTimeout(() => btn.textContent = 'Copiar chave PIX', 1600);
-        } catch {
-          alert('Não foi possível copiar. Copie manualmente: ' + keyEl.textContent.trim());
-        }
-      });
-    }
-  });
-</script>
-
-    
-    <!-- RECADOS -->
-       <section id="recados" class="conteudo-secao" aria-labelledby="recados-title">
-      <h2 id="recados-title">Deixe uma mensagem!</h2>
-
-      <form id="form-recados" class="form-recados" action="#" novalidate>
-        <div class="field">
-          <label for="nome-recado">Seu Nome</label>
-          <input type="text" id="nome-recado" name="nome" autocomplete="name" maxlength="80" placeholder="Digite seu nome">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px;">
+          <button type="button" class="btn-confirmar" id="copy-pix">Copiar chave PIX</button>
         </div>
 
-        <div class="field">
-          <label for="mensagem-recado">Mensagem</label>
-          <textarea id="mensagem-recado" name="mensagem" rows="5" maxlength="1000" placeholder="Escreva uma mensagem bonita para a Manu ✨"></textarea>
+        <p style="margin:16px 0 8px;">Leia o QRCODE abaixo:</p>
+
+        <!-- QR Code + Modal -->
+        <figure class="qr-card">
+          <img src="assets/QRCODE.jpeg"
+               alt="QR Code do PIX"
+               class="qr-code"
+               width="320" height="320">
+          <figcaption></figcaption>
+          <button type="button" class="btn-confirmar qr-open" aria-haspopup="dialog">
+            Ampliar QR
+          </button>
+        </figure>
+
+        <div id="qr-modal" class="qr-modal" role="dialog" aria-modal="true" aria-labelledby="qr-title" hidden>
+          <div class="qr-dialog" role="document">
+            <button class="qr-close" aria-label="Fechar (Esc)">×</button>
+            <h3 id="qr-title" class="sr-only">QR Code em tamanho grande</h3>
+            <img src="assets/QRCODE.jpeg" alt="" class="qr-full">
+            <a class="qr-download" href="assets/QRCODE.jpeg" download="PIX-Manu.jpg">Baixar QR</a>
+          </div>
         </div>
 
-        <div class="actions">
-          <button type="submit" class="botao-submit">Enviar Recado</button>
-          <div id="status-recado" class="aviso-recados" role="status" aria-live="polite"></div>
-        </div>
-      </form>
-
-        <div id="lista-recados" class="lista-recados" aria-live="polite" aria-busy="false"></div>
+        <p style="margin-top:16px;">
+          Obrigada de coração por fazer parte desse momento. Cada gesto vira memória boa por aqui. ✨ — Manuh
+        </p>
+      </div>
     </section>
+  </main>
 
-  
   <noscript>
-    <p style="text-align:center">Ative o JavaScript para ver o carrossel, recados e contador.</p>
+    <p style="text-align:center">Ative o JavaScript para ver o carrossel, contador, formulário e modal do QR.</p>
   </noscript>
 
-  <!-- Defer para carregar após HTML -->
+  <!-- Script de copiar PIX (mantido aqui por praticidade) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('copy-pix');
+      const keyEl = document.getElementById('pix-key');
+      if (btn && keyEl) {
+        btn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(keyEl.textContent.trim());
+            btn.textContent = 'Chave copiada! ✅';
+            setTimeout(() => btn.textContent = 'Copiar chave PIX', 1600);
+          } catch {
+            alert('Não foi possível copiar. Copie manualmente: ' + keyEl.textContent.trim());
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- App principal -->
   <script src="app.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
