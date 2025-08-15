@@ -31,7 +31,7 @@ body{ font-family:var(--font-body); background:var(--lilac-bg); color:var(--text
   text-align:center;
 }
 
-/* Truque para a “coroa”: o container encolhe ao conteúdo (título) */
+
 .header-conteudo{
   display:flex; flex-direction:column; align-items:center; gap:10px;
   width:max-content;            /* encolhe ao tamanho do conteúdo */
@@ -53,8 +53,8 @@ body{ font-family:var(--font-body); background:var(--lilac-bg); color:var(--text
 .detalhe-topo,
 .detalhe-baixo{
   display:block;
-  width:82%;                    /* fica ~da largura do título (efeito coroa) */
-  max-width:520px;              /* limite pra telas maiores */
+  width:90%;                    
+  max-width:520px;              
   height:auto; object-fit:contain;
   filter:drop-shadow(0 2px 4px rgba(0,0,0,.08));
 }
@@ -64,7 +64,7 @@ body{ font-family:var(--font-body); background:var(--lilac-bg); color:var(--text
 /* ======================
    NAV (sem sanduíche)
 ====================== */
-.menu-toggle{ display:none !important; } /* se existir no HTML */
+.menu-toggle{ display:none !important; }
 
 nav{
   position:sticky; top:0; z-index:20;
@@ -274,3 +274,4 @@ main{ max-width:1100px; margin:20px auto; padding:0 16px; }
   0%{ background-position:100% 0; }
   100%{ background-position:0 0; }
 }
+
